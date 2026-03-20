@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF8E4D" />
+      <stop offset="100%" stop-color="#FF6B00" />
+    </linearGradient>
+
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="trackShadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1A1A24" flood-opacity="0.05" />
+    </filter>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#FF6B00" flood-opacity="0.8" />
+    </filter>
+
+    <clipPath id="roundClip">
+      <rect x="0" y="0" width="400" height="12" rx="6" />
+    </clipPath>
+
+    <path id="star" d="M 0 -10 C 0 -2 2 0 10 0 C 2 0 0 2 0 10 C 0 2 -2 0 -10 0 C -2 0 0 -2 0 -10 Z" />
+  </defs>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.083; 0.916; 0.95; 1" dur="6s" repeatCount="indefinite" />
+    <animateTransform attributeName="transform" type="translate" values="0,20; 0,0; 0,0; 0,-10; 0,-10" keyTimes="0; 0.083; 0.916; 0.95; 1" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.8 0.2 1; 0 0 1 1; 0.4 0 1 1; 0 0 1 1" />
+
+    <g transform="translate(100, 100)">
+      
+      <g>
+        <g>
+          <animate attributeName="opacity" values="1; 1; 0; 0; 0" keyTimes="0; 0.48; 0.5; 0.916; 1" dur="6s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,-8; 0,-8; 0,-8" keyTimes="0; 0.48; 0.5; 0.916; 1" dur="6s" repeatCount="indefinite" />
+          
+          <g transform="translate(8, -19) scale(0.6)">
+            <use href="#star" fill="#FFB380">
+              <animateTransform attributeName="transform" type="rotate" values="0; 360" dur="4s" repeatCount="indefinite" />
+            </use>
+          </g>
+          <text x="24" y="-15" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="15" fill="#FAF0E6">
+            Generating magic...
+          </text>
+        </g>
+
+        <g>
+          <animate attributeName="opacity" values="0; 0; 1; 1; 0" keyTimes="0; 0.48; 0.5; 0.916; 1" dur="6s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="translate" values="0,8; 0,8; 0,0; 0,0; 0,0" keyTimes="0; 0.48; 0.5; 0.916; 1" dur="6s" repeatCount="indefinite" />
+          <text x="0" y="-15" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="15" fill="#FAF0E6">
+            Creation complete!
+          </text>
+        </g>
+
+        <g>
+          <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 0,-4; 0,0; 0,0" keyTimes="0; 0.48; 0.5; 0.55; 1" dur="6s" repeatCount="indefinite" />
+          <text id="progress-num" x="400" y="-15" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="16" fill="#FFB380" text-anchor="end">
+            0%
+          </text>
+        </g>
+      </g>
+
+      <g transform="translate(0, 6)">
+        
+        <g>
+          <animateTransform attributeName="transform" type="scale" values="1; 1; 1.05; 1.05; 1.05" keyTimes="0; 0.5; 0.58; 0.916; 1" dur="6s" repeatCount="indefinite" />
+          <rect x="0" y="-6" width="400" height="12" rx="6" fill="none" stroke="#FF6B00" stroke-width="2" opacity="0">
+            <animate attributeName="opacity" values="0; 0; 0.6; 0; 0" keyTimes="0; 0.5; 0.52; 0.6; 1" dur="6s" repeatCount="indefinite" />
+          </rect>
+        </g>
+
+        <g>
+          <animateTransform attributeName="transform" type="scale" values="1; 1; 1.015; 1; 1" keyTimes="0; 0.5; 0.54; 0.916; 1" dur="6s" repeatCount="indefinite" />
+          
+          <rect x="0" y="-6" width="400" height="12" rx="6" fill="#FFFFFF" filter="url(#trackShadow)" />
+
+          <g clip-path="url(#roundClip)" transform="translate(0, -6)">
+            <rect x="0" y="0" width="0" height="12" fill="url(#barGrad)">
+              <animate attributeName="width" values="0; 0; 400; 400; 400" keyTimes="0; 0.083; 0.5; 0.916; 1" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1; 0.25 1 0.5 1; 0 0 1 1; 0 0 1 1" />
+            </rect>
+            
+            <rect x="-150" y="0" width="80" height="12" fill="url(#shimmer)" transform="skewX(-20)">
+              <animate attributeName="x" values="-150; -150; 450; 450; 450" keyTimes="0; 0.083; 0.45; 0.916; 1" dur="6s" repeatCount="indefinite" />
+            </rect>
+          </g>
+
+          <circle id="glow-dot" cx="5" cy="0" r="5" fill="#FFFFFF" filter="url(#glow)">
+            <animate attributeName="cx" values="5; 5; 395; 395; 395" keyTimes="0; 0.083; 0.5; 0.916; 1" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1; 0.25 1 0.5 1; 0 0 1 1; 0 0 1 1" />
+            <animate attributeName="opacity" values="0; 1; 1; 0; 0" keyTimes="0; 0.083; 0.48; 0.5; 1" dur="6s" repeatCount="indefinite" />
+          </circle>
+
+        </g>
+      </g>
+
+      <g transform="translate(415, -15)">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 0; 1; 0; 0" keyTimes="0; 0.5; 0.55; 0.65; 1" dur="6s" repeatCount="indefinite" />
+          <g>
+            <animateTransform attributeName="transform" type="scale" values="0; 0; 1.2; 0; 0" keyTimes="0; 0.5; 0.55; 0.65; 1" dur="6s" repeatCount="indefinite" />
+            <g>
+              <animateTransform attributeName="transform" type="rotate" values="0; 0; 90; 180; 180" keyTimes="0; 0.5; 0.55; 0.65; 1" dur="6s" repeatCount="indefinite" />
+              <use href="#star" fill="#FF6B00" />
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <g transform="translate(390, 20)">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 0; 1; 0; 0" keyTimes="0; 0.51; 0.56; 0.68; 1" dur="6s" repeatCount="indefinite" />
+          <g>
+            <animateTransform attributeName="transform" type="scale" values="0; 0; 0.8; 0; 0" keyTimes="0; 0.51; 0.56; 0.68; 1" dur="6s" repeatCount="indefinite" />
+            <g>
+              <animateTransform attributeName="transform" type="rotate" values="-45; -45; 45; 135; 135" keyTimes="0; 0.51; 0.56; 0.68; 1" dur="6s" repeatCount="indefinite" />
+              <use href="#star" fill="#FF8E4D" />
+            </g>
+          </g>
+        </g>
+      </g>
+      
+      <g transform="translate(365, -10)">
+        <g opacity="0">
+          <animate attributeName="opacity" values="0; 0; 1; 0; 0" keyTimes="0; 0.52; 0.58; 0.7; 1" dur="6s" repeatCount="indefinite" />
+          <g>
+            <animateTransform attributeName="transform" type="scale" values="0; 0; 0.6; 0; 0" keyTimes="0; 0.52; 0.58; 0.7; 1" dur="6s" repeatCount="indefinite" />
+            <g>
+              <animateTransform attributeName="transform" type="rotate" values="15; 15; 105; 195; 195" keyTimes="0; 0.52; 0.58; 0.7; 1" dur="6s" repeatCount="indefinite" />
+              <use href="#star" fill="#FF6B00" />
+            </g>
+          </g>
+        </g>
+      </g>
+
+    </g>
+  </g>
+
+  <script type="text/javascript">
+    <![CDATA[
+      const duration = 6000;      
+      const animStart = 0.0833;   
+      const animEnd = 0.5;        
+      
+      function updateCounter(timestamp) {
+          if (!window.startTime) window.startTime = timestamp;
+          let elapsed = (timestamp - window.startTime) % duration;
+          let percent = 0;
+          
+          let startMs = animStart * duration;
+          let endMs = animEnd * duration;
+          
+          if (elapsed < startMs) {
+              percent = 0;
+          } else if (elapsed > endMs) {
+              percent = 100;
+          } else {
+              let ratio = (elapsed - startMs) / (endMs - startMs);
+              let easeOut = 1 - Math.pow(1 - ratio, 3); 
+              percent = Math.floor(easeOut * 100);
+          }
+          
+          const numEl = document.getElementById('progress-num');
+          if(numEl) {
+             numEl.textContent = percent + '%';
+          }
+          
+          requestAnimationFrame(updateCounter);
+      }
+      requestAnimationFrame(updateCounter);
+    ]]>
+  </script>
+</svg>

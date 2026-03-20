@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Output files (generated videos and frames)
+output/frames/
+output/*.mov
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+*.swp

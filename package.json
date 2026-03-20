@@ -1,0 +1,17 @@
+{
+  "name": "svg-to-transparent-video",
+  "version": "1.0.0",
+  "description": "将SVG动画导出为透明背景MOV视频（ProRes 4444），可直接导入剪映",
+  "main": "tools/index.js",
+  "scripts": {
+    "start": "node tools/index.js",
+    "test": "node tools/test.js"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0",
+    "inquirer": "^8.2.6",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "cli-progress": "^3.12.0"
+  }
+}

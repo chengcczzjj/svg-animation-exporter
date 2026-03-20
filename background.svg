@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <pattern id="premium-grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <animateTransform 
+        attributeName="patternTransform" 
+        type="translate" 
+        from="0 0" 
+        to="100 100" 
+        dur="6s" 
+        repeatCount="indefinite"
+        calcMode="linear" />
+      
+      <line x1="0" y1="0" x2="100" y2="100" stroke="#1A202C" stroke-width="0.5" />
+      
+      <path d="M50,45 L50,55 M45,50 L55,50" stroke="#4A5568" stroke-width="1.5" opacity="0.6" />
+      
+      <circle cx="0" cy="0" r="2" fill="#2D3748" />
+      <circle cx="100" cy="0" r="2" fill="#2D3748" />
+      <circle cx="0" cy="100" r="2" fill="#2D3748" />
+      <circle cx="100" cy="100" r="2" fill="#2D3748" />
+    </pattern>
+
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="30%" stop-color="#05060A" stop-opacity="0" />
+      <stop offset="100%" stop-color="#05060A" stop-opacity="0.95" />
+    </radialGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0A0B10" />
+  
+  <rect width="100%" height="100%" fill="url(#premium-grid)" />
+
+  <g>
+    <line x1="150" y1="0" x2="150" y2="1000" stroke="#4A5568" stroke-width="1" opacity="0.4" stroke-dasharray="10 20">
+      <animate attributeName="stroke-dashoffset" from="0" to="-60" dur="6s" repeatCount="indefinite" />
+    </line>
+    
+    <line x1="850" y1="0" x2="850" y2="1000" stroke="#4A5568" stroke-width="1" opacity="0.4" stroke-dasharray="5 15">
+      <animate attributeName="stroke-dashoffset" from="0" to="60" dur="6s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <rect width="100%" height="100%" fill="url(#vignette)" style="pointer-events: none;" />
+  
+  <rect x="20" y="20" width="960" height="960" fill="none" stroke="#2D3748" stroke-width="1" opacity="0.5" />
+</svg>
