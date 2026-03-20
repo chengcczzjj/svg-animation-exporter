@@ -1,3 +1,5 @@
+[English](./README_EN.md) | **中文**
+
 # SVG 动画导出工具
 
 将 SVG 动画导出为透明背景 MOV 视频（ProRes 4444），可直接导入剪映等视频编辑软件。
