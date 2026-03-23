@@ -25,11 +25,11 @@ npm install
 
 ## Quick Start
 
-- **Windows** — Double-click `start.bat` to launch
+- **Windows** — Double-click `start_win.bat` to launch
 - **macOS / Linux** — Run in terminal:
   ```bash
-  chmod +x start.sh   # first time only
-  ./start.sh
+  chmod +x start_mac.sh   # first time only
+  ./start_mac.sh
   ```
 
 Alternatively, run on any platform:
@@ -50,8 +50,8 @@ Exported videos will be saved in the `output/` directory.
 ## Project Structure
 
 ```
-├── start.bat              # Windows launch script
-├── start.sh               # macOS / Linux launch script
+├── start_win.bat          # Windows launch script
+├── start_mac.sh           # macOS / Linux launch script
 ├── SVG/                   # SVG animation source files
 ├── package.json
 ├── tools/

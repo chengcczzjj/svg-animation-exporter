@@ -25,11 +25,11 @@ npm install
 
 ## 快速启动
 
-- **Windows** — 双击 `start.bat` 即可启动
+- **Windows** — 双击 `start_win.bat` 即可启动
 - **macOS / Linux** — 在终端中运行：
   ```bash
-  chmod +x start.sh   # 首次使用需添加执行权限
-  ./start.sh
+  chmod +x start_mac.sh   # 首次使用需添加执行权限
+  ./start_mac.sh
   ```
 
 也可以在任意平台的终端中运行：
@@ -50,8 +50,8 @@ npm start
 ## 项目结构
 
 ```
-├── start.bat              # Windows 一键启动脚本
-├── start.sh               # macOS / Linux 启动脚本
+├── start_win.bat          # Windows 启动脚本
+├── start_mac.sh           # macOS / Linux 启动脚本
 ├── SVG/                   # SVG 动画源文件目录
 ├── package.json
 ├── tools/
