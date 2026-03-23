@@ -23,7 +23,11 @@
 npm install
 ```
 
-## 使用方法
+## 快速启动
+
+Windows 用户可以直接双击项目根目录下的 `start.bat` 一键启动，无需手动输入命令。
+
+也可以在终端中运行：
 
 ```bash
 npm start
@@ -41,7 +45,8 @@ npm start
 ## 项目结构
 
 ```
-├── *.svg                  # SVG 动画源文件
+├── start.bat              # 一键启动脚本（双击即可运行）
+├── SVG/                   # SVG 动画源文件目录
 ├── package.json
 ├── tools/
 │   ├── index.js           # 主入口，串联所有模块

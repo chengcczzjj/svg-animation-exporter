@@ -23,7 +23,11 @@ Export SVG animations to transparent-background MOV videos (ProRes 4444), ready 
 npm install
 ```
 
-## Usage
+## Quick Start
+
+On Windows, simply double-click `start.bat` in the project root to launch the tool — no need to type any commands.
+
+Alternatively, run in the terminal:
 
 ```bash
 npm start
@@ -41,7 +45,8 @@ Exported videos will be saved in the `output/` directory.
 ## Project Structure
 
 ```
-├── *.svg                  # SVG animation source files
+├── start.bat              # One-click launch script (double-click to run)
+├── SVG/                   # SVG animation source files
 ├── package.json
 ├── tools/
 │   ├── index.js           # Main entry, orchestrates all modules
