@@ -25,9 +25,14 @@ npm install
 
 ## 快速启动
 
-Windows 用户可以直接双击项目根目录下的 `start.bat` 一键启动，无需手动输入命令。
+- **Windows** — 双击 `start.bat` 即可启动
+- **macOS / Linux** — 在终端中运行：
+  ```bash
+  chmod +x start.sh   # 首次使用需添加执行权限
+  ./start.sh
+  ```
 
-也可以在终端中运行：
+也可以在任意平台的终端中运行：
 
 ```bash
 npm start
@@ -45,7 +50,8 @@ npm start
 ## 项目结构
 
 ```
-├── start.bat              # 一键启动脚本（双击即可运行）
+├── start.bat              # Windows 一键启动脚本
+├── start.sh               # macOS / Linux 启动脚本
 ├── SVG/                   # SVG 动画源文件目录
 ├── package.json
 ├── tools/
