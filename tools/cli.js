@@ -25,9 +25,7 @@ function showBanner() {
  */
 async function selectFiles(files) {
   if (files.length === 0) {
-    console.log(chalk.red('✗ 未找到任何 SVG 文件！'));
-    console.log(chalk.gray('  请将 .svg 文件放到工作目录中'));
-    process.exit(1);
+    return [];
   }
 
   if (files.length === 1) {

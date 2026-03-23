@@ -109,9 +109,29 @@ async function executeExportTask(task) {
 async function main() {
   showBanner();
 
-  // 1. 扫描SVG文件
+  // 1. 扫描SVG文件（未找到时允许重新扫描）
   const workDir = path.resolve(__dirname, '..');
-  const svgFiles = scanSvgFiles(workDir);
+  let svgFiles;
+  while (true) {
+    console.log(chalk.cyan('🔍 正在扫描 SVG 文件...'));
+    svgFiles = scanSvgFiles(workDir);
+    if (svgFiles.length > 0) break;
+
+    console.log(chalk.red('✗ 未找到任何 SVG 文件！'));
+    console.log(chalk.gray(`  请将 .svg 文件放到工作目录: ${workDir}`));
+    const { retry } = await require('inquirer').prompt([{
+      type: 'confirm',
+      name: 'retry',
+      message: '放入文件后，是否重新扫描？',
+      default: true,
+    }]);
+    if (!retry) {
+      console.log(chalk.yellow('已退出。'));
+      return;
+    }
+  }
+
+  console.log(chalk.green(`✓ 找到 ${svgFiles.length} 个 SVG 文件`));
 
   // 2. 选择文件
   const selectedFiles = await selectFiles(svgFiles);
