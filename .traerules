@@ -1,0 +1,3 @@
+# SVG Files Constraint
+When you are asked to generate, create, or add any new `.svg` files, ALWAYS place them in the `svg/` directory.
+Do not create them in the root directory or any other folder unless explicitly requested by the user.

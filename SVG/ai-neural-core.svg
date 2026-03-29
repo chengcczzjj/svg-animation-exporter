@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" style="background: #090a0f;">
+  <defs>
+    <style>
+      /* Extreme Easing Variables */
+      :root {
+        --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+        --ease-snap: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* Core Pulsing with Smooth Easing */
+      @keyframes corePulse {
+        0%, 100% { transform: scale(0.95); opacity: 0.8; }
+        50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 25px rgba(79, 172, 254, 0.6)); }
+      }
+
+      /* Orbital Spin - Continuous but with slight resistance */
+      @keyframes orbitSpin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes orbitSpinRev {
+        0% { transform: rotate(360deg); }
+        100% { transform: rotate(0deg); }
+      }
+
+      /* Step Spin - Mechanical AI feel */
+      @keyframes stepSpin {
+        0% { transform: rotate(0deg); }
+        20%, 25% { transform: rotate(90deg); }
+        45%, 50% { transform: rotate(180deg); }
+        70%, 75% { transform: rotate(270deg); }
+        95%, 100% { transform: rotate(360deg); }
+      }
+
+      /* Path Tracing - 无极生长 */
+      @keyframes pathTrace {
+        0% { stroke-dashoffset: 800; opacity: 0; }
+        10% { opacity: 1; }
+        70% { stroke-dashoffset: 0; opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+      }
+
+      /* Node Floating - 错野编排 */
+      @keyframes nodeFloat {
+        0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
+        50% { transform: translateY(-8px) scale(1.3); opacity: 1; filter: drop-shadow(0 0 12px rgba(161, 140, 209, 0.8)); }
+      }
+
+      /* Data Particle Flow */
+      @keyframes particleFlow {
+        0% { stroke-dashoffset: 120; opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { stroke-dashoffset: -120; opacity: 0; }
+      }
+
+      /* Apply Animations */
+      .core {
+        transform-origin: 400px 400px;
+        animation: corePulse 4s var(--ease-smooth) infinite;
+      }
+      .ring-slow {
+        transform-origin: 400px 400px;
+        animation: orbitSpin 30s linear infinite;
+      }
+      .ring-fast-rev {
+        transform-origin: 400px 400px;
+        animation: orbitSpinRev 20s linear infinite;
+      }
+      .ring-step {
+        transform-origin: 400px 400px;
+        animation: stepSpin 12s var(--ease-snap) infinite;
+      }
+
+      /* Staggered Neural Paths */
+      .neural-path {
+        fill: none;
+        stroke: url(#lineGrad);
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        animation: pathTrace 7s var(--ease-smooth) infinite;
+      }
+      .path-1 { animation-delay: 0s; }
+      .path-2 { animation-delay: 0.6s; }
+      .path-3 { animation-delay: 1.2s; }
+      .path-4 { animation-delay: 1.8s; }
+      .path-5 { animation-delay: 2.4s; }
+      .path-6 { animation-delay: 3.0s; }
+
+      /* Staggered Nodes */
+      .node {
+        transform-origin: center;
+        transform-box: fill-box;
+        animation: nodeFloat 4s var(--ease-spring) infinite;
+      }
+      .n1 { animation-delay: 0.1s; }
+      .n2 { animation-delay: 0.3s; }
+      .n3 { animation-delay: 0.5s; }
+      .n4 { animation-delay: 0.7s; }
+      .n5 { animation-delay: 0.9s; }
+      .n6 { animation-delay: 1.1s; }
+      .n7 { animation-delay: 1.3s; }
+      .n8 { animation-delay: 1.5s; }
+
+      /* Particles */
+      .particle {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-dasharray: 4 236; /* Short dash, long gap */
+        animation: particleFlow 3s linear infinite;
+        filter: drop-shadow(0 0 6px #fff);
+      }
+      .p1 { animation-delay: 0s; }
+      .p2 { animation-delay: 1.5s; }
+      .p3 { animation-delay: 0.8s; }
+    </style>
+
+    <!-- Subtle Gradients -->
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4facfe" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4facfe" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#a18cd1" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#fbc2eb" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glowSoft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glowIntense" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Central Neural Core -->
+  <g transform="translate(400, 400)">
+    
+    <!-- Neural Network Paths -->
+    <g>
+      <!-- Top Right -->
+      <path class="neural-path path-1" d="M 0 0 C 60 -120, 180 -180, 280 -120 S 380 0, 320 180" />
+      <!-- Top Left -->
+      <path class="neural-path path-2" d="M 0 0 C -60 -120, -180 -180, -280 -120 S -380 0, -320 180" />
+      <!-- Bottom Right -->
+      <path class="neural-path path-3" d="M 0 0 C 120 60, 180 180, 120 280 S 0 380, -180 320" />
+      <!-- Bottom Left -->
+      <path class="neural-path path-4" d="M 0 0 C -120 60, -180 180, -120 280 S 0 380, 180 320" />
+      <!-- Far Right -->
+      <path class="neural-path path-5" d="M 0 0 C 180 0, 280 -60, 320 -180 S 220 -340, 60 -280" />
+      <!-- Far Left -->
+      <path class="neural-path path-6" d="M 0 0 C -180 0, -280 -60, -320 -180 S -220 -340, -60 -280" />
+    </g>
+
+    <!-- Data Particles (traveling along the paths) -->
+    <path class="particle p1" d="M 0 0 C 60 -120, 180 -180, 280 -120" />
+    <path class="particle p2" d="M 0 0 C -120 60, -180 180, -120 280" />
+    <path class="particle p3" d="M 0 0 C -180 0, -280 -60, -320 -180" />
+
+    <!-- Connection Nodes -->
+    <circle cx="280" cy="-120" r="5" fill="#4facfe" class="node n1" />
+    <circle cx="-280" cy="-120" r="4" fill="#a18cd1" class="node n2" />
+    <circle cx="120" cy="280" r="6" fill="#4facfe" class="node n3" />
+    <circle cx="-120" cy="280" r="3" fill="#a18cd1" class="node n4" />
+    <circle cx="320" cy="-180" r="4" fill="#4facfe" class="node n5" />
+    <circle cx="-320" cy="-180" r="5" fill="#a18cd1" class="node n6" />
+    <circle cx="320" cy="180" r="3" fill="#4facfe" class="node n7" />
+    <circle cx="-320" cy="180" r="6" fill="#a18cd1" class="node n8" />
+  </g>
+
+  <!-- Orbital Rings -->
+  <!-- Outer thin dashed ring -->
+  <g class="ring-slow">
+    <circle cx="400" cy="400" r="180" fill="none" stroke="rgba(79, 172, 254, 0.15)" stroke-width="1" stroke-dasharray="2 8" />
+    <circle cx="400" cy="400" r="210" fill="none" stroke="rgba(161, 140, 209, 0.2)" stroke-width="1.5" stroke-dasharray="80 40 10 40" />
+  </g>
+
+  <!-- Middle reversed ring -->
+  <g class="ring-fast-rev">
+    <circle cx="400" cy="400" r="140" fill="none" stroke="rgba(79, 172, 254, 0.2)" stroke-width="1" stroke-dasharray="150 50" />
+    <circle cx="400" cy="400" r="110" fill="none" stroke="rgba(161, 140, 209, 0.3)" stroke-width="2" stroke-dasharray="30 15 5 15" />
+  </g>
+
+  <!-- Mechanical step-spin ring -->
+  <g class="ring-step">
+    <path d="M 400 240 A 160 160 0 0 1 560 400" fill="none" stroke="rgba(79, 172, 254, 0.6)" stroke-width="2" stroke-linecap="round" filter="url(#glowSoft)" />
+    <path d="M 400 560 A 160 160 0 0 1 240 400" fill="none" stroke="rgba(161, 140, 209, 0.6)" stroke-width="2" stroke-linecap="round" filter="url(#glowSoft)" />
+    <!-- Data brackets -->
+    <path d="M 230 400 L 250 400 M 550 400 L 570 400 M 400 230 L 400 250 M 400 550 L 400 570" fill="none" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2" />
+  </g>
+
+  <!-- The AI Core Eye -->
+  <g class="core">
+    <!-- Outer ambient glow -->
+    <circle cx="400" cy="400" r="60" fill="url(#coreGrad)" filter="url(#glowIntense)" opacity="0.4" />
+    
+    <!-- Inner hard ring -->
+    <circle cx="400" cy="400" r="45" fill="none" stroke="url(#coreGrad)" stroke-width="3" filter="url(#glowSoft)" />
+    <circle cx="400" cy="400" r="52" fill="none" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1" />
+    
+    <!-- Central diamond / pupil -->
+    <polygon points="400,375 420,400 400,425 380,400" fill="rgba(255, 255, 255, 0.9)" filter="url(#glowSoft)" />
+    <polygon points="400,385 410,400 400,415 390,400" fill="#090a0f" />
+    
+    <!-- Core micro-details -->
+    <circle cx="400" cy="400" r="18" fill="none" stroke="rgba(161, 140, 209, 0.8)" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="400" cy="400" r="4" fill="#00f2fe" filter="url(#glowSoft)" />
+  </g>
+
+  <!-- Floating Data Bits -->
+  <g opacity="0.5">
+    <circle cx="350" cy="250" r="1.5" fill="#fff" class="node n1" />
+    <circle cx="480" cy="300" r="2" fill="#4facfe" class="node n3" />
+    <circle cx="450" cy="500" r="1" fill="#a18cd1" class="node n5" />
+    <circle cx="300" cy="450" r="2" fill="#fff" class="node n7" />
+  </g>
+</svg>
